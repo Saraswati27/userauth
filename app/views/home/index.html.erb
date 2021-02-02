@@ -1,0 +1,13 @@
+<% if current_user %>
+  Logged in as <%= current_user.email %>
+  <%= link_to "Log Out ", controller: "sessions", action: 'destroy' %>
+  
+<% else %>
+<%= link_to "sign up ", controller: "employees", action: 'new' %>
+<%= link_to "Log in", controller: "sessions", action: 'new' %>
+ 
+<% end %>
+
+<p id='notice'><%= notice %></p>
+<h1>Example</h1>
+
